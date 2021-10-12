@@ -1,6 +1,7 @@
+// Neste tópico do curso tivemos alguns exemplos das diferenças e vantagens do typescript comparado ao javascript 
 var minhaVar = 'minha-variavel';
 
-function minhaFunc(x, y){
+function minhaFunc(x, y): any{
     return x + y;
 }
 
