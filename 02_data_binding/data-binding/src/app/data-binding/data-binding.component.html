@@ -1,5 +1,5 @@
 <!-- <section class="property-binding"> -->
-  <!--
+<!--
     // Exemplo interpolação
     <article>
         <h3>Interpolação</h3>
@@ -27,8 +27,8 @@
       </select>
       <br><br> -->
 
-      <!-- Aplicando Class Binding -->
-      <!-- <div class="alert {{classe.value}}" role="alert">
+<!-- Aplicando Class Binding -->
+<!-- <div class="alert {{classe.value}}" role="alert">
         Texto colorido conforme valor do combobox
       </div>
 
@@ -46,14 +46,14 @@
         Erro
       </div> -->
 
-      <!-- Style Binding -->
-      <!-- <div class="alert alert-danger" role="alert"
+<!-- Style Binding -->
+<!-- <div class="alert alert-danger" role="alert"
       [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
       Esse texto somente aparece em caso de erro.
     </div>
     </div>
   </article> -->
-  <!-- Anotações Propety Binding:
+<!-- Anotações Propety Binding:
         - Valor do Component para o Template
         - Usa-se colchetes <img [src]= "Exemplo">
         - Formato padrão é através de bind-nomePropriedade <img bind-src="Exemplo">
@@ -61,12 +61,24 @@
 <!-- </section> -->
 
 <!-- Event Binding -->
-<section>
+<section class="event-binding">
   <article>
     <h3>Event Bind</h3>
-    <button class='btn btn-primary'>Clique-me</button>
+    <div>
+      <button (click)="botaoClicado()" class='btn btn-primary'>Me clique!</button>
+      <br><br>
+      <input type="text" #campoInput (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor(campoInput.value)"
+        (blur)="salvarValor(campoInput.value)">
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+
+      <br>
+      <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
+        Passe o mouse sobre mim
+      </span>
+    </div>
   </article>
 </section>
 
-<!-- ANnotações -->
-<!-- No evento é utilizado "()" -->
+<!-- Anotações -->
+<!-- No evento binding é utilizado "()" -->
