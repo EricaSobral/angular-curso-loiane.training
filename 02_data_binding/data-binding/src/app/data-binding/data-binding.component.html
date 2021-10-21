@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!-- <section class="property-binding"> -->
   <!--
     // Exemplo interpolação
     <article>
@@ -14,7 +14,7 @@
         <img [src]="urlImagem">
         <img bind-src="urlImagem">
     </article> -->
-
+<!-- 
   <article>
     <h3>Class e Style Binding</h3>
     <div>
@@ -25,10 +25,10 @@
         <option value="alert-warning">Alerta</option>
         <option value="alert-danger">Erro</option>
       </select>
-      <br><br>
+      <br><br> -->
 
       <!-- Aplicando Class Binding -->
-      <div class="alert {{classe.value}}" role="alert">
+      <!-- <div class="alert {{classe.value}}" role="alert">
         Texto colorido conforme valor do combobox
       </div>
 
@@ -44,18 +44,29 @@
 
       <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
         Erro
-      </div>
+      </div> -->
 
       <!-- Style Binding -->
-      <div class="alert alert-danger" role="alert"
+      <!-- <div class="alert alert-danger" role="alert"
       [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
       Esse texto somente aparece em caso de erro.
     </div>
     </div>
-  </article>
+  </article> -->
   <!-- Anotações Propety Binding:
         - Valor do Component para o Template
         - Usa-se colchetes <img [src]= "Exemplo">
         - Formato padrão é através de bind-nomePropriedade <img bind-src="Exemplo">
         - Quando não existe uma propriede no elemento usa-se [attr.colspan] -->
+<!-- </section> -->
+
+<!-- Event Binding -->
+<section>
+  <article>
+    <h3>Event Bind</h3>
+    <button class='btn btn-primary'>Clique-me</button>
+  </article>
 </section>
+
+<!-- ANnotações -->
+<!-- No evento é utilizado "()" -->
